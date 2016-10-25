@@ -15,7 +15,6 @@ def create_project_hash
    description=project.css("p.bbcard_blurb").text
    location=project.css("span.location-name").text
    percent_funded=project.css("ul.project-stats li.first.funded strong").text.sub!("%","").to_i
-   project.css().text
    projects[title][:image_link]=image_link
    projects[title][:description]=description
    projects[title][:location]=location
